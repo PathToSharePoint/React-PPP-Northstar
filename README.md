@@ -18,7 +18,10 @@ A SharePoint package is included in the repository, or you can clone the reposit
 
 Solution|Author(s)
 --------|---------
-react-p-p-p-northstar | Christophe Humbert (User Managed Solutions LLC) aka PathToSharePoint
+react-p-p-p-northstar | Christophe Humbert (User Managed Solutions LLC)
+
+Github: @PathToSharePoint 
+Twitter: @Path2SharePoint
 
 ## Version history
 

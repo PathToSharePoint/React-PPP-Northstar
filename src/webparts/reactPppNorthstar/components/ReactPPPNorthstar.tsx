@@ -5,7 +5,6 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class ReactPPPNorthstar extends React.Component<IReactPPPNorthstarProps, {}> {
   public render(): React.ReactElement<IReactPPPNorthstarProps> {
-    console.log(this.props.northstarDropdownChild);
     return (
       <div className={ styles.reactPppNorthstar }>
         <div className={ styles.container }>

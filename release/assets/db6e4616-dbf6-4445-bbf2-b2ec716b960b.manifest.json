@@ -2,7 +2,7 @@
   "id": "db6e4616-dbf6-4445-bbf2-b2ec716b960b",
   "alias": "ReactPPPNorthstarWebPart",
   "componentType": "WebPart",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "manifestVersion": 2,
   "requiresCustomScript": false,
   "supportedHosts": [
@@ -35,7 +35,7 @@
     "scriptResources": {
       "react-ppp-northstar-web-part": {
         "type": "path",
-        "path": "react-ppp-northstar-web-part_47bd9f5f3098f644568e.js"
+        "path": "react-ppp-northstar-web-part_ad46fc425ab75965ed5a.js"
       },
       "tslib": {
         "type": "component",

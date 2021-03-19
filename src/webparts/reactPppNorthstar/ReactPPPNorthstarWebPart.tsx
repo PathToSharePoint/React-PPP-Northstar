@@ -1,19 +1,14 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
-import {
-  IPropertyPaneConfiguration,
-  PropertyPaneHorizontalRule,
-  PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
+import { IPropertyPaneConfiguration, PropertyPaneHorizontalRule, PropertyPaneTextField } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'ReactPPPNorthstarWebPartStrings';
 import ReactPPPNorthstar from './components/ReactPPPNorthstar';
-import { IReactPPPNorthstarProps } from './components/IReactPPPNorthstarProps';
-import { ICustomPropertyPaneProps } from './components/ICustomPropertyPaneProps';
 import { CustomPropertyPane } from './components/CustomPropertyPane';
 import { PropertyPaneHost } from '../../PPP/PropertyPaneHost';
+import { PropertyPaneHostsFactory, IPropertyPaneHostsProps } from '../../PPP/PropertyPaneHostsStore';
 
 export interface IReactPPPNorthstarWebPartProps {
   description: string;
@@ -28,22 +23,23 @@ export interface IReactPPPNorthstarWebPartProps {
 export default class ReactPPPNorthstarWebPart extends BaseClientSideWebPart<IReactPPPNorthstarWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<IReactPPPNorthstarProps> = React.createElement(
-      ReactPPPNorthstar,
-      { ...this.properties }
-    );
 
-    const customPropertyPane: React.ReactElement<ICustomPropertyPaneProps> = React.createElement(
-      CustomPropertyPane,
-      {
-        propertyBag: this.properties,
-        renderWP: this.render.bind(this)
-      }
-    );
-
-    ReactDom.render([element, customPropertyPane], this.domElement);
-
+    ReactDom.render(
+      <>
+        {/* Web Part content */}
+        <ReactPPPNorthstar {...this.properties} />
+        {/* Property Pane custom controls */}
+        <CustomPropertyPane
+          propertyBag={this.properties}
+          renderWP={this.render.bind(this)}
+          propertyPaneHosts={this.propertyPaneHosts}
+        />
+      </>,
+      this.domElement);
   }
+
+  // Store for managing the Property Pane hosts
+  public propertyPaneHosts: IPropertyPaneHostsProps = PropertyPaneHostsFactory();
 
   protected onDispose(): void {
     ReactDom.unmountComponentAtNode(this.domElement);
@@ -53,7 +49,12 @@ export default class ReactPPPNorthstarWebPart extends BaseClientSideWebPart<IRea
     return Version.parse('1.0');
   }
 
+  protected onPropertyPaneConfigurationStart() {
+    this.propertyPaneHosts[this.instanceId] = false;
+  }
+
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+
     return {
       pages: [
         {
@@ -64,22 +65,23 @@ export default class ReactPPPNorthstarWebPart extends BaseClientSideWebPart<IRea
             {
               groupName: strings.BasicGroupName,
               groupFields: [
+                // PropertyPaneHost is a generic control that hosts the actual control
                 PropertyPaneHorizontalRule(),
                 PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                  label: strings.DescriptionFieldLabel + this.instanceId
                 }),
                 PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarRadioGroupParent'),
+                PropertyPaneHost('northstarSlider', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarDropdownChild'),
+                PropertyPaneHost('northstarRadioGroupParent', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarDatepicker'),
+                PropertyPaneHost('northstarDropdownChild', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarRadioGroupColor'),
+                PropertyPaneHost('northstarDatepicker', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarSlider'),
+                PropertyPaneHost('northstarRadioGroupColor', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarRadioGroup'),
+                PropertyPaneHost('northstarRadioGroup', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule()
               ]
             }

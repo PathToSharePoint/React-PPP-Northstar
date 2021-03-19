@@ -13,6 +13,7 @@ export const CustomPropertyPane: React.FunctionComponent<ICustomPropertyPaneProp
     props.renderWP();
   }
 
+  // Teams themes
   let currentTheme;
 
   switch (props.propertyBag["northstarRadioGroup"]) {
@@ -24,10 +25,10 @@ export const CustomPropertyPane: React.FunctionComponent<ICustomPropertyPaneProp
 
   return (
     <Provider theme={currentTheme}>
-      <PropertyPanePortal>
+      <PropertyPanePortal propertyPaneHosts={props.propertyPaneHosts}>
         {/* Regular Fluent UI Northstar RadioGroup */}
         <FormRadioGroup
-          label="Teams Theme (FormRadioGroup)"
+          label={"Teams Theme (FormRadioGroup)"}
           data-Property="northstarRadioGroup"
           defaultCheckedValue={(props.propertyBag["northstarRadioGroup"]) ? props.propertyBag["northstarRadioGroup"] : "Light"}
           onCheckedValueChange={(e, d) => updateWPProperty("northstarRadioGroup", d.value)}
@@ -35,14 +36,14 @@ export const CustomPropertyPane: React.FunctionComponent<ICustomPropertyPaneProp
         />
         {/* Regular Fluent UI Northstar Datepicker */}
         <FormDatepicker
-          label="Calendar (FormDatepicker)"
+          label={"Calendar (FormDatepicker)"}
           data-Property="northstarDatepicker"
           defaultSelectedDate={(props.propertyBag["northstarDatepicker"]) ? new Date(props.propertyBag["northstarDatepicker"]) : new Date()}
           onDateChange={(e, d) => updateWPProperty("northstarDatepicker", d.value.toISOString().substring(0, 10))}
         />
         {/* Regular Fluent UI Northstar Slider */}
         <FormSlider
-          label="Slider (FormSlider)"
+          label={"Slider (FormSlider)"}
           data-Property="northstarSlider"
           defaultValue={props.propertyBag["northstarSlider"] || 100}
           fluid
@@ -50,9 +51,9 @@ export const CustomPropertyPane: React.FunctionComponent<ICustomPropertyPaneProp
         />
         {/* Regular Fluent UI Northstar RadioGroup */}
         <FormRadioGroup
-          label="Color Picker (FormRadioGroup)"
+          label={"Color Picker (FormRadioGroup)"}
           data-Property="northstarRadioGroupColor"
-          defaultCheckedValue="pink"
+          defaultCheckedValue={(props.propertyBag["northstarRadioGroupColor"]) ? props.propertyBag["northstarRadioGroupColor"] : "Light"}
           items={['pink', 'blue', 'green', 'red', 'orange'].map(color => ({
             key: color, value: color, name: color, 'aria-label': color,
             variables: { indicatorColorDefault: color, indicatorBackgroundColorChecked: color, indicatorBorderColorDefaultHover: color },
@@ -60,14 +61,14 @@ export const CustomPropertyPane: React.FunctionComponent<ICustomPropertyPaneProp
           onCheckedValueChange={(e, p) => updateWPProperty("northstarRadioGroupColor", p.value)}
         />
         <FormRadioGroup
-          label="Parent Selection (FormRadioGroup)"
+          label={"Parent Selection (FormRadioGroup)"}
           data-Property="northstarRadioGroupParent"
           defaultCheckedValue={(props.propertyBag["northstarRadioGroupParent"]) ? props.propertyBag["northstarRadioGroupParent"] : null}
           onCheckedValueChange={(e, d) => updateWPProperty("northstarRadioGroupParent", d.value)}
           items={["Office", "M365"].map(thm => ({ key: thm, value: thm, name: thm, label: thm }))}
         />
         <FormDropdown
-          label="Child Selection (FormDropdown)"
+          label={"Child Selection (FormDropdown)"}
           data-Property="northstarDropdownChild"
           placeholder="Pick an App..."
           fluid
