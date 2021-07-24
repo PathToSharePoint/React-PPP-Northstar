@@ -65,13 +65,17 @@ export default class ReactPPPNorthstarWebPart extends BaseClientSideWebPart<IRea
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                // PropertyPaneHost is a generic control that hosts the actual control
                 PropertyPaneHorizontalRule(),
                 PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel + this.instanceId
+                  label: strings.DescriptionFieldLabel
                 }),
-                PropertyPaneHorizontalRule(),
-                PropertyPaneHost('northstarSlider', this.propertyPaneHosts),
+                PropertyPaneHorizontalRule()
+              ]
+            },
+            {
+              groupName: strings.NorthstarGroupName,
+              groupFields: [
+                // PropertyPaneHost is a generic control that hosts the actual control
                 PropertyPaneHorizontalRule(),
                 PropertyPaneHost('northstarRadioGroupParent', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
@@ -80,6 +84,8 @@ export default class ReactPPPNorthstarWebPart extends BaseClientSideWebPart<IRea
                 PropertyPaneHost('northstarDatepicker', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
                 PropertyPaneHost('northstarRadioGroupColor', this.propertyPaneHosts),
+                PropertyPaneHorizontalRule(),
+                PropertyPaneHost('northstarSlider', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule(),
                 PropertyPaneHost('northstarRadioGroup', this.propertyPaneHosts),
                 PropertyPaneHorizontalRule()

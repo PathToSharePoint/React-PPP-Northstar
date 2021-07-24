@@ -15,13 +15,15 @@ export const PropertyPanePortal: React.FunctionComponent<IPropertyPanePortalProp
 
     const portals = [];
 
-        React.Children.forEach<React.ReactNode>(props.children, (child: React.ReactElement) => {
-            if ((child.props["data-Property"])
-                && (props.propertyPaneHosts.hosts[child.props["data-Property"]])
-                && (props.propertyPaneHosts.hosts[child.props["data-Property"]] instanceof HTMLElement)) {
-                portals.push(ReactDOM.createPortal(child, props.propertyPaneHosts.hosts[child.props["data-Property"]]));
-            }
-        });
+    React.Children.forEach<React.ReactNode>(props.children, (child: React.ReactElement) => {
+        if ((child)
+            && (child.props["data-Property"])
+            && (props.propertyPaneHosts.hosts[child.props["data-Property"]])
+            && (props.propertyPaneHosts.hosts[child.props["data-Property"]] instanceof HTMLElement)) {
+            portals.push(ReactDOM.createPortal(child, props.propertyPaneHosts.hosts[child.props["data-Property"]]));
+        }
+    });
+
 
     return (<>{portals}</>);
 };

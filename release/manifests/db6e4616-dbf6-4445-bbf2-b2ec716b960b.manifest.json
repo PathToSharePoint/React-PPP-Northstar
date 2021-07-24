@@ -16,14 +16,14 @@
         "default": "Other"
       },
       "title": {
-        "default": "React-P-P-P-Northstar"
+        "default": "React-PPP-Northstar"
       },
       "description": {
         "default": "Demo of the Property Pane Portal with Fluent UI Northstar controls"
       },
       "officeFabricIconFontName": "Door",
       "properties": {
-        "description": "React-P-P-P-Northstar"
+        "description": "React-PPP-Northstar"
       }
     }
   ],

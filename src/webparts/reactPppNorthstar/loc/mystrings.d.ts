@@ -1,6 +1,7 @@
 declare interface IReactPPPNorthstarWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
+  NorthstarGroupName: string;
   DescriptionFieldLabel: string;
 }
 

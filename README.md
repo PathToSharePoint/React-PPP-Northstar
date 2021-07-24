@@ -1,4 +1,4 @@
-# react-p-p-p-northstar
+# react-ppp-northstar
 
 ## Summary
 
@@ -18,7 +18,7 @@ A SharePoint package is included in the repository, or you can clone the reposit
 
 Solution|Author(s)
 --------|---------
-react-p-p-p-northstar | Christophe Humbert (User Managed Solutions LLC)
+react-ppp-northstar | Christophe Humbert (User Managed Solutions LLC)
 
 Github: @PathToSharePoint 
 Twitter: @Path2SharePoint

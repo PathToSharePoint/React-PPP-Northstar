@@ -12,8 +12,8 @@ export default class ReactPPPNorthstar extends React.Component<IReactPPPNorthsta
             <div className={ styles.column }>
               <span className={ styles.title }>Property Pane Portal</span>
               <p className={ styles.subTitle }>Use any form control in the Property Pane.</p>
-              <p className={styles.description}>Dropdown Parent: {escape(this.props.northstarRadioGroupParent || "")}</p>
-              <p className={styles.description}>Dropdown Child: {escape(this.props.northstarDropdownChild || "")}</p>
+              <p className={styles.description}>Parent Selection: {escape(this.props.northstarRadioGroupParent || "")}</p>
+              <p className={styles.description}>Child Selection: {escape(this.props.northstarDropdownChild || "")}</p>
               <p className={styles.description}>Northstar Datepicker: {escape(this.props.northstarDatepicker || "")}</p>
               <p className={styles.description}>Northstar Colorpicker: {escape(this.props.northstarRadioGroupColor || "")}</p>
               <p className={styles.description}>Northstar Slider: {escape((this.props.northstarSlider || "").toString())}</p>

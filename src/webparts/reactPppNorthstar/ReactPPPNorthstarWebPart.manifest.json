@@ -17,11 +17,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
-    "title": { "default": "React-P-P-P-Northstar" },
+    "title": { "default": "React-PPP-Northstar" },
     "description": { "default": "Demo of the Property Pane Portal with Fluent UI Northstar controls" },
     "officeFabricIconFontName": "Door",
     "properties": {
-      "description": "React-P-P-P-Northstar"
+      "description": "React-PPP-Northstar"
     }
   }]
 }
