@@ -3,12 +3,12 @@
   "solution": {
     "name": "react-ppp-northstar-client-side-solution",
     "id": "a5fdda72-2084-4a46-9f84-307f039b2f0b",
-    "version": "1.0.0.0",
+    "version": "1.1.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
     "developer": {
-      "name": "",
+      "name": "Christophe Humbert - User Managed Solutions LLC",
       "websiteUrl": "",
       "privacyUrl": "",
       "termsOfUseUrl": "",

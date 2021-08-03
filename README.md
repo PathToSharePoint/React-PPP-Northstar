@@ -2,11 +2,13 @@
 
 ## Summary
 
-The Property Pane Portal allows you to use any form control in the Property Pane. You are no longer limited to out-of-the-box controls, or required to build custom controls.
+The Property Pane Portal allows you to use any Reactjs controls library in the Property Pane. You are no longer limited to out-of-the-box controls, or required to build custom controls from scratch.
+
+This sample features the use of the Property Pane Portal with the Microsoft Fluent UI Northstar controls.
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.12-green.svg)
+![version](https://img.shields.io/badge/version-1.13.0-beta.13-green.svg)
 
 ## Prerequisites
 
@@ -27,6 +29,7 @@ Twitter: @Path2SharePoint
 
 Version|Date|Comments
 -------|----|--------
+1.0|March 16, 2021|version-1.13.0-beta.13
 1.0|March 16, 2021|Initial release
 
 ## Disclaimer
@@ -47,11 +50,7 @@ Either use the included SharePoint package or:
 
 ## Features
 
-This section will be expanded with more details. For now you can:
-
-- Play with the Property Pane controls
-- Check out ReactPPPNorthstarWebPart.ts to see how the Property Pane hosts are referenced
-- Check out CustomPropertyPane.tsx to see how the Fluent UI Northstar controls are implemented
+Check out [the related blog post](https://wordpress.com/post/blog.pathtosharepoint.com/2507) for technical details.
 
 ## References
 
