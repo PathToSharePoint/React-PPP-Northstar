@@ -35,7 +35,7 @@
     "scriptResources": {
       "react-ppp-northstar-web-part": {
         "type": "path",
-        "path": "react-ppp-northstar-web-part.js"
+        "path": "react-ppp-northstar-web-part_e5e2ca8cfba11f60b67a.js"
       },
       "@microsoft/sp-property-pane": {
         "type": "component",
@@ -44,7 +44,7 @@
       },
       "ReactPPPNorthstarWebPartStrings": {
         "type": "path",
-        "path": "ReactPPPNorthstarWebPartStrings_en-us.js"
+        "path": "ReactPPPNorthstarWebPartStrings_en-us_934ba68e523200142b0634b15b1b01d4.js"
       },
       "@microsoft/sp-lodash-subset": {
         "type": "component",
