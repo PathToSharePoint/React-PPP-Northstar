@@ -6,6 +6,8 @@ The Property Pane Portal allows you to use any Reactjs controls library in the P
 
 This sample features the use of the Property Pane Portal with the Microsoft Fluent UI Northstar controls.
 
+![Edit Mode](https://pathtosharepoint.files.wordpress.com/2021/08/image-2.png)
+
 ## Used SharePoint Framework Version
 
 ![version](https://img.shields.io/badge/version-1.13.0-beta.13-green.svg)
@@ -29,8 +31,8 @@ Twitter: @Path2SharePoint
 
 Version|Date|Comments
 -------|----|--------
-1.0|March 16, 2021|version-1.13.0-beta.13
-1.0|March 16, 2021|Initial release
+1.1.0|August 2, 2021|SPFx version-1.13.0-beta.13
+1.0.0|March 16, 2021|Initial release
 
 ## Disclaimer
 
@@ -46,11 +48,11 @@ Either use the included SharePoint package or:
 - Ensure that you are at the solution folder
 - in the command-line run:
   - **npm install**
-  - **gulp serve**
+  - **gulp serve-deprecated**
 
 ## Features
 
-Check out [the related blog post](https://wordpress.com/post/blog.pathtosharepoint.com/2507) for technical details.
+Check out [the related blog post](https://blog.pathtosharepoint.com/2021/08/02/introducing-the-property-pane-portal-2/) for technical details.
 
 ## References
 
