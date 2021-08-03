@@ -10,7 +10,7 @@ This sample features the use of the Property Pane Portal with the Microsoft Flue
 
 ## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.13.0-beta.13-green.svg)
+![version](https://img.shields.io/badge/version-1.13.0%20beta.13-yellow.svg)
 
 ## Prerequisites
 
